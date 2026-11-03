@@ -1,0 +1,1878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner AppLocale="UTF16" ID="{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}" Label="" LastModificationDate="1793100000" Name="DFD Sistem Informasi Pendaftaran UKM" Objects="120" Symbols="60" Target="Data Flow Diagram" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" signature="BPM_MODEL_XML" version="16.5.0.3982"?>
+<!-- DFD UKMHub - Generated from Use Case Diagram (Usecase 1.vsdx) -->
+
+<Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
+
+<o:RootObject Id="o1">
+<c:Children>
+<o:Model Id="o2">
+<a:ObjectID>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</a:ObjectID>
+<a:Name>DFD Sistem Informasi Pendaftaran UKM</a:Name>
+<a:Code>DFD_Sistem_Informasi_Pendaftaran_UKM</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<a:ModelOptionsText>[ModelOptions]
+
+[ModelOptions\Business Process options]
+CaseSensitive=No
+DisplayName=Yes
+EnableTrans=No
+UseTerm=No
+DFDNotation=0
+</a:ModelOptionsText>
+
+<c:ProcessLanguage>
+<o:Shortcut Id="o3">
+<a:ObjectID>328F516D-27A1-47D0-9E7F-EBB8B73BDAFC</a:ObjectID>
+<a:Name>Data Flow Diagram</a:Name>
+<a:Code>DFD</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<a:TargetStereotype/>
+<a:TargetID>B45F50B7-1927-406E-A25B-E8AFB1C13854</a:TargetID>
+<a:TargetClassID>7141CE88-2107-423A-A5D4-23B73A90B769</a:TargetClassID>
+</o:Shortcut>
+</c:ProcessLanguage>
+
+<c:BusinessProcessDiagrams>
+<!-- ============================================================ -->
+<!--  DIAGRAM 1: DFD LEVEL 0 – CONTEXT DIAGRAM                   -->
+<!-- ============================================================ -->
+<o:BusinessProcessDiagram Id="o10">
+<a:ObjectID>D0000000-0000-0000-0000-000000000001</a:ObjectID>
+<a:Name>DFD Level 0 - Context Diagram</a:Name>
+<a:Code>DFD_Level_0</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<c:Symbols>
+
+  <!-- ====== EXTERNAL ENTITIES (OrganizationUnit) ====== -->
+
+  <!-- Mahasiswa -->
+  <o:OrganizationUnitSymbol Id="s_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-22000,-2000), (-14000,2500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_mhs"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- Admin UKM -->
+  <o:OrganizationUnitSymbol Id="s_adminukm">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-22000,8000), (-14000,12500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_adminukm"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- Super Admin -->
+  <o:OrganizationUnitSymbol Id="s_superadmin">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((14000,-2000), (22000,2500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_superadmin"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- Sistem Kirim Email -->
+  <o:OrganizationUnitSymbol Id="s_email">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((14000,8000), (22000,12500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_email"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- ====== CENTRAL PROCESS (Level 0) ====== -->
+  <o:ProcessSymbol Id="s_p0">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,2000), (5000,8000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:Process Ref="p_0"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- ====== DATA STORES ====== -->
+
+  <!-- D1: Data User -->
+  <o:ResourceSymbol Id="s_d1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,13000), (5000,14500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_user"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- D2: Data UKM -->
+  <o:ResourceSymbol Id="s_d2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,15500), (5000,17000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_ukm"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- D3: Data Pendaftaran -->
+  <o:ResourceSymbol Id="s_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,18000), (5000,19500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_pendaftaran"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- D4: Data Kuesioner -->
+  <o:ResourceSymbol Id="s_d4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,20500), (5000,22000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_kuesioner"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- D5: Data Notifikasi -->
+  <o:ResourceSymbol Id="s_d5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,23000), (5000,24500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_notifikasi"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- ====== FLOWS – Level 0 ====== -->
+
+  <!-- Mahasiswa -> Sistem -->
+  <o:FlowSymbol Id="fs_mhs_sys">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((-14000,1000), (-5000,3500))</a:Rect>
+    <a:ListOfPoints>((-14000,1000),(-5000,3000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s_p0"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_mhs_sys"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Sistem -> Mahasiswa -->
+  <o:FlowSymbol Id="fs_sys_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((-14000,2500), (-5000,5000))</a:Rect>
+    <a:ListOfPoints>((-5000,5000),(-14000,2500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_mhs"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Admin UKM -> Sistem -->
+  <o:FlowSymbol Id="fs_adminukm_sys">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((-14000,8000), (-5000,6000))</a:Rect>
+    <a:ListOfPoints>((-14000,8000),(-5000,6000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s_adminukm"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s_p0"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_adminukm_sys"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Sistem -> Admin UKM -->
+  <o:FlowSymbol Id="fs_sys_adminukm">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((-5000,7000), (-14000,10000))</a:Rect>
+    <a:ListOfPoints>((-5000,7000),(-14000,10000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s_adminukm"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_adminukm"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Super Admin -> Sistem -->
+  <o:FlowSymbol Id="fs_superadmin_sys">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((5000,3000), (14000,1000))</a:Rect>
+    <a:ListOfPoints>((14000,1000),(5000,3000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s_superadmin"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s_p0"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_superadmin_sys"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Sistem -> Super Admin -->
+  <o:FlowSymbol Id="fs_sys_superadmin">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((5000,5000), (14000,2000))</a:Rect>
+    <a:ListOfPoints>((5000,5000),(14000,2000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s_superadmin"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_superadmin"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Sistem -> Email -->
+  <o:FlowSymbol Id="fs_sys_email">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,200)</a:CenterTextOffset>
+    <a:Rect>((5000,7000), (14000,9000))</a:Rect>
+    <a:ListOfPoints>((5000,7000),(14000,9000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s_email"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_email"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Sistem <-> D1 -->
+  <o:ResourceFlowSymbol Id="rfs_sys_d1_w">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-2000,8000), (2000,13000))</a:Rect>
+    <a:ListOfPoints>((0,8000),(0,13000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s_d1"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_d1"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:ResourceFlowSymbol Id="rfs_d1_sys_r">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((0,8000), (4000,13000))</a:Rect>
+    <a:ListOfPoints>((2000,13000),(2000,8000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s_d1"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s_p0"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_d1_sys"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- Sistem <-> D2 -->
+  <o:ResourceFlowSymbol Id="rfs_sys_d2_w">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-2000,8000), (2000,15500))</a:Rect>
+    <a:ListOfPoints>((0,8000),(0,15500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s_d2"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_d2"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:ResourceFlowSymbol Id="rfs_d2_sys_r">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((0,8000), (4000,15500))</a:Rect>
+    <a:ListOfPoints>((2000,15500),(2000,8000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s_d2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s_p0"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_d2_sys"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- Sistem <-> D3 -->
+  <o:ResourceFlowSymbol Id="rfs_sys_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-2000,8000), (2000,18000))</a:Rect>
+    <a:ListOfPoints>((0,8000),(0,18000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_d3"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- Sistem <-> D4 -->
+  <o:ResourceFlowSymbol Id="rfs_sys_d4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-2000,8000), (2000,20500))</a:Rect>
+    <a:ListOfPoints>((0,8000),(0,20500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s_d4"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_d4"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- Sistem <-> D5 -->
+  <o:ResourceFlowSymbol Id="rfs_sys_d5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-2000,8000), (2000,23000))</a:Rect>
+    <a:ListOfPoints>((0,8000),(0,23000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s_p0"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s_d5"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f_sys_d5"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+</c:Symbols>
+</o:BusinessProcessDiagram>
+
+<!-- ============================================================ -->
+<!--  DIAGRAM 2: DFD LEVEL 1 – DETAIL PROSES                      -->
+<!-- ============================================================ -->
+<o:BusinessProcessDiagram Id="o20">
+<a:ObjectID>D1000000-0000-0000-0000-000000000002</a:ObjectID>
+<a:Name>DFD Level 1 - Detail Proses</a:Name>
+<a:Code>DFD_Level_1</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<c:Symbols>
+
+  <!-- === EXTERNAL ENTITIES === -->
+  <o:OrganizationUnitSymbol Id="s1_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-45000,3000), (-35000,8000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_mhs"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s1_adminukm">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-45000,30000), (-35000,35000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_adminukm"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s1_superadmin">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((35000,3000), (45000,8000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_superadmin"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s1_email">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((35000,30000), (45000,35000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_email"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- === DATA STORES === -->
+  <o:ResourceSymbol Id="s1_d1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-12000,50000), (0,52000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_user"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s1_d2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((0,50000), (12000,52000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_ukm"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s1_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-12000,54000), (0,56000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_pendaftaran"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s1_d4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((0,54000), (12000,56000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_kuesioner"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s1_d5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-6000,58000), (6000,60000))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_notifikasi"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- === PROCESSES Level 1 === -->
+
+  <!-- P1: Autentikasi & Login -->
+  <o:ProcessSymbol Id="s1_p1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-10000,-3000), (0,3000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_1"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P2: Isi Kuesioner Bakat & Minat -->
+  <o:ProcessSymbol Id="s1_p2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-10000,8000), (0,14000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_2"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P3: Lihat UKM & Rekomendasi -->
+  <o:ProcessSymbol Id="s1_p3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((2000,8000), (12000,14000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_3"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P4: Pendaftaran UKM -->
+  <o:ProcessSymbol Id="s1_p4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-10000,18000), (0,24000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_4"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P5: Batalkan / Alihkan Pilihan UKM -->
+  <o:ProcessSymbol Id="s1_p5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((2000,18000), (12000,24000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_5"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P6: Cek Status Pendaftaran -->
+  <o:ProcessSymbol Id="s1_p6">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-5000,28000), (5000,34000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_6"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P7: Kelola Informasi UKM -->
+  <o:ProcessSymbol Id="s1_p7">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-10000,37000), (0,43000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_7"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P8: Kelola Data Peserta -->
+  <o:ProcessSymbol Id="s1_p8">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((2000,37000), (12000,43000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_8"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P9: Sistem Seleksi Reguler -->
+  <o:ProcessSymbol Id="s1_p9">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((15000,3000), (25000,9000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_9"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- P10: Kirim Notifikasi Email -->
+  <o:ProcessSymbol Id="s1_p10">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((15000,15000), (25000,21000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_10"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- === FLOWS Level 1 === -->
+
+  <!-- Mahasiswa -> P1 Login -->
+  <o:FlowSymbol Id="f1_mhs_p1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,5000), (-10000,0))</a:Rect>
+    <a:ListOfPoints>((-35000,5000),(-10000,0))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p1"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_01"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Mahasiswa -> P2 Kuesioner -->
+  <o:FlowSymbol Id="f1_mhs_p2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,5500), (-10000,11000))</a:Rect>
+    <a:ListOfPoints>((-35000,5500),(-10000,11000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p2"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_02"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Mahasiswa -> P3 Lihat UKM -->
+  <o:FlowSymbol Id="f1_mhs_p3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,6000), (2000,11000))</a:Rect>
+    <a:ListOfPoints>((-35000,6000),(2000,11000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_03"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Mahasiswa -> P4 Daftar -->
+  <o:FlowSymbol Id="f1_mhs_p4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,6500), (-10000,21000))</a:Rect>
+    <a:ListOfPoints>((-35000,6500),(-10000,21000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p4"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_04"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Mahasiswa -> P5 Batalkan -->
+  <o:FlowSymbol Id="f1_mhs_p5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,7000), (2000,21000))</a:Rect>
+    <a:ListOfPoints>((-35000,7000),(2000,21000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p5"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_05"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Mahasiswa -> P6 Cek Status -->
+  <o:FlowSymbol Id="f1_mhs_p6">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,7500), (-5000,31000))</a:Rect>
+    <a:ListOfPoints>((-35000,7500),(-5000,31000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p6"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_06"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P1 -> Mahasiswa (JWT Token) -->
+  <o:FlowSymbol Id="f1_p1_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-10000,1000), (-35000,5000))</a:Rect>
+    <a:ListOfPoints>((-10000,1000),(-35000,5000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p1"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_07"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P1 -> D1 (simpan user) -->
+  <o:ResourceFlowSymbol Id="f1_p1_d1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-5000,3000), (-5000,50000))</a:Rect>
+    <a:ListOfPoints>((-5000,3000),(-5000,50000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p1"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d1"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_08"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- D1 -> P1 (verifikasi) -->
+  <o:ResourceFlowSymbol Id="f1_d1_p1">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-3000,50000), (-3000,3000))</a:Rect>
+    <a:ListOfPoints>((-3000,50000),(-3000,3000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s1_d1"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p1"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_09"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P2 -> D4 (simpan jawaban kuesioner) -->
+  <o:ResourceFlowSymbol Id="f1_p2_d4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-5000,14000), (5000,54000))</a:Rect>
+    <a:ListOfPoints>((-5000,14000),(5000,54000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d4"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_10"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P2 -> P3 (skor & rekomendasi) -->
+  <o:FlowSymbol Id="f1_p2_p3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((0,11000), (2000,11000))</a:Rect>
+    <a:ListOfPoints>((0,11000),(2000,11000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_11"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- D2 -> P3 (data UKM) -->
+  <o:ResourceFlowSymbol Id="f1_d2_p3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((5000,50000), (7000,14000))</a:Rect>
+    <a:ListOfPoints>((5000,50000),(7000,14000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s1_d2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_12"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P3 -> Mahasiswa (tampil rekomendasi) -->
+  <o:FlowSymbol Id="f1_p3_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((2000,8000), (-35000,5000))</a:Rect>
+    <a:ListOfPoints>((2000,8000),(-35000,5000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p3"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_13"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P4 -> D3 (simpan pendaftaran) -->
+  <o:ResourceFlowSymbol Id="f1_p4_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-5000,24000), (-5000,54000))</a:Rect>
+    <a:ListOfPoints>((-5000,24000),(-5000,54000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p4"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_14"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- D3 -> P4 (baca status) -->
+  <o:ResourceFlowSymbol Id="f1_d3_p4">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-3000,54000), (-3000,24000))</a:Rect>
+    <a:ListOfPoints>((-3000,54000),(-3000,24000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s1_d3"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p4"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_15"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P4 -> Mahasiswa (no referensi) -->
+  <o:FlowSymbol Id="f1_p4_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-10000,21000), (-35000,7000))</a:Rect>
+    <a:ListOfPoints>((-10000,21000),(-35000,7000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p4"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_16"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P5 -> D3 (update pembatalan) -->
+  <o:ResourceFlowSymbol Id="f1_p5_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((7000,24000), (3000,54000))</a:Rect>
+    <a:ListOfPoints>((7000,24000),(3000,54000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p5"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_17"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- D3 -> P6 (baca status untuk tampil) -->
+  <o:ResourceFlowSymbol Id="f1_d3_p6">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-5000,54000), (-1000,34000))</a:Rect>
+    <a:ListOfPoints>((-5000,54000),(-1000,34000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s1_d3"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p6"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_18"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P6 -> Mahasiswa (info status) -->
+  <o:FlowSymbol Id="f1_p6_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-5000,28000), (-35000,7500))</a:Rect>
+    <a:ListOfPoints>((-5000,28000),(-35000,7500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p6"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_19"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Admin UKM -> P7 -->
+  <o:FlowSymbol Id="f1_admin_p7">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,32000), (-10000,40000))</a:Rect>
+    <a:ListOfPoints>((-35000,32000),(-10000,40000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_adminukm"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p7"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_20"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- Admin UKM -> P8 -->
+  <o:FlowSymbol Id="f1_admin_p8">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-35000,32500), (2000,40000))</a:Rect>
+    <a:ListOfPoints>((-35000,32500),(2000,40000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_adminukm"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p8"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_21"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P7 -> D2 (update info UKM) -->
+  <o:ResourceFlowSymbol Id="f1_p7_d2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-5000,43000), (3000,50000))</a:Rect>
+    <a:ListOfPoints>((-5000,43000),(3000,50000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p7"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d2"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_22"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P8 -> D3 (update data peserta) -->
+  <o:ResourceFlowSymbol Id="f1_p8_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((7000,43000), (3000,54000))</a:Rect>
+    <a:ListOfPoints>((7000,43000),(3000,54000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p8"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_23"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- Super Admin -> P9 -->
+  <o:FlowSymbol Id="f1_superadmin_p9">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((35000,5000), (25000,6000))</a:Rect>
+    <a:ListOfPoints>((35000,5000),(25000,6000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s1_superadmin"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p9"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_24"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P9 -> D3 (hasil seleksi) -->
+  <o:ResourceFlowSymbol Id="f1_p9_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((20000,9000), (3000,54000))</a:Rect>
+    <a:ListOfPoints>((20000,9000),(3000,54000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p9"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_25"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P9 -> P10 (trigger notifikasi) -->
+  <o:FlowSymbol Id="f1_p9_p10">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((20000,9000), (20000,15000))</a:Rect>
+    <a:ListOfPoints>((20000,9000),(20000,15000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p9"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s1_p10"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_26"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P10 -> Email Service -->
+  <o:FlowSymbol Id="f1_p10_email">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((25000,18000), (35000,32000))</a:Rect>
+    <a:ListOfPoints>((25000,18000),(35000,32000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p10"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_email"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_27"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P10 -> D5 (log notifikasi) -->
+  <o:ResourceFlowSymbol Id="f1_p10_d5">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((15000,21000), (0,58000))</a:Rect>
+    <a:ListOfPoints>((15000,21000),(0,58000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p10"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s1_d5"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_28"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <!-- P10 -> Mahasiswa (notif diterima/ditolak) -->
+  <o:FlowSymbol Id="f1_p10_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((15000,18000), (-35000,7000))</a:Rect>
+    <a:ListOfPoints>((15000,18000),(-35000,7000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p10"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_29"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P8 -> Admin UKM (laporan peserta) -->
+  <o:FlowSymbol Id="f1_p8_admin">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((2000,40000), (-35000,32000))</a:Rect>
+    <a:ListOfPoints>((2000,40000),(-35000,32000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p8"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_adminukm"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_30"/></c:Object>
+  </o:FlowSymbol>
+
+  <!-- P9 -> Super Admin (laporan seleksi) -->
+  <o:FlowSymbol Id="f1_p9_superadmin">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((25000,6000), (35000,5000))</a:Rect>
+    <a:ListOfPoints>((25000,6000),(35000,5000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle>
+    <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s1_p9"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s1_superadmin"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f1_31"/></c:Object>
+  </o:FlowSymbol>
+
+</c:Symbols>
+</o:BusinessProcessDiagram>
+
+<!-- ============================================================ -->
+<!--  DIAGRAM 3: DFD LEVEL 2 – DEKOMPOSISI PROSES 4 (PENDAFTARAN) -->
+<!-- ============================================================ -->
+<o:BusinessProcessDiagram Id="o30">
+<a:ObjectID>D2000000-0000-0000-0000-000000000003</a:ObjectID>
+<a:Name>DFD Level 2 - Dekomposisi Proses 4 (Pendaftaran UKM)</a:Name>
+<a:Code>DFD_Level_2_Proses_4</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<c:Symbols>
+  <!-- External Entity: Mahasiswa -->
+  <o:OrganizationUnitSymbol Id="s2_mhs">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-35000,5000), (-25000,10000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_mhs"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- Data Store: D2 Data UKM -->
+  <o:ResourceSymbol Id="s2_d2">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-18000,18000), (-4000,20500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_ukm"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- Data Store: D3 Data Pendaftaran -->
+  <o:ResourceSymbol Id="s2_d3">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((12000,18000), (28000,20500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_pendaftaran"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- Process 4.1 -->
+  <o:ProcessSymbol Id="s2_p41">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-18000,5000), (-6000,10500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_4_1"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- Process 4.2 -->
+  <o:ProcessSymbol Id="s2_p42">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((-3000,5000), (9000,10500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_4_2"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- Process 4.3 -->
+  <o:ProcessSymbol Id="s2_p43">
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode>
+    <a:Rect>((12000,5000), (26000,10500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText>
+    <a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_4_3"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- Flows Symbol for Diagram 3 -->
+  <o:FlowSymbol Id="fs2_01">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-25000,8000), (-18000,8000))</a:Rect>
+    <a:ListOfPoints>((-25000,8000),(-18000,8000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s2_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s2_p41"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_01"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs2_02">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-11000,18000), (-11000,10500))</a:Rect>
+    <a:ListOfPoints>((-11000,18000),(-11000,10500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s2_d2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s2_p41"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_02"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs2_03">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-6000,8000), (-3000,8000))</a:Rect>
+    <a:ListOfPoints>((-6000,8000),(-3000,8000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s2_p41"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s2_p42"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_03"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:FlowSymbol Id="fs2_04">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-25000,6000), (-3000,6000))</a:Rect>
+    <a:ListOfPoints>((-25000,6000),(-3000,6000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s2_mhs"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s2_p42"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_04"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:FlowSymbol Id="fs2_05">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((9000,8000), (12000,8000))</a:Rect>
+    <a:ListOfPoints>((9000,8000),(12000,8000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s2_p42"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s2_p43"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_05"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs2_06">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((19000,10500), (19000,18000))</a:Rect>
+    <a:ListOfPoints>((19000,10500),(19000,18000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s2_p43"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s2_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_06"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs2_07">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((12000,5500), (-25000,5500))</a:Rect>
+    <a:ListOfPoints>((12000,5500),(-25000,5500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s2_p43"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s2_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_07"/></c:Object>
+  </o:FlowSymbol>
+</c:Symbols>
+</o:BusinessProcessDiagram>
+
+<!-- ============================================================ -->
+<!--  DIAGRAM 4: DFD LEVEL 2 – DEKOMPOSISI PROSES 8 & 9 (SELEKSI)  -->
+<!-- ============================================================ -->
+<o:BusinessProcessDiagram Id="o40">
+<a:ObjectID>D2000000-0000-0000-0000-000000000004</a:ObjectID>
+<a:Name>DFD Level 2 - Dekomposisi Proses 8 &amp; 9 (Manajemen Seleksi &amp; Verifikasi)</a:Name>
+<a:Code>DFD_Level_2_Proses_8_9</a:Code>
+<a:CreationDate>1793100000</a:CreationDate>
+<a:Creator>yafi</a:Creator>
+<a:ModificationDate>1793100000</a:ModificationDate>
+<a:Modifier>yafi</a:Modifier>
+<c:Symbols>
+  <!-- External Entities -->
+  <o:OrganizationUnitSymbol Id="s3_adminukm">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-35000,20000), (-25000,25000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_adminukm"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s3_superadmin">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-35000,8000), (-25000,13000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_superadmin"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s3_email">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((30000,8000), (40000,13000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_email"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <o:OrganizationUnitSymbol Id="s3_mhs">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((30000,-4000), (40000,1000))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>DISPNAME 0 Arial,10,B</a:FontList>
+    <c:Object><o:OrganizationUnit Ref="ou_mhs"/></c:Object>
+  </o:OrganizationUnitSymbol>
+
+  <!-- Data Stores -->
+  <o:ResourceSymbol Id="s3_d3">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-18000,32000), (-2000,34500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_pendaftaran"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s3_d2">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-2000,32000), (12000,34500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_ukm"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s3_d4">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((14000,32000), (28000,34500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_kuesioner"/></c:Object>
+  </o:ResourceSymbol>
+
+  <o:ResourceSymbol Id="s3_d5">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((14000,-4000), (28000,-1500))</a:Rect>
+    <a:FontList>DISPNAME 0 Arial,10,N</a:FontList>
+    <c:Object><o:Resource Ref="ds_notifikasi"/></c:Object>
+  </o:ResourceSymbol>
+
+  <!-- Level 2 Processes: 8.1, 8.2, 8.3, 8.4 -->
+  <o:ProcessSymbol Id="s3_p81">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-18000,19000), (-4000,24500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_8_1"/></c:Object>
+  </o:ProcessSymbol>
+
+  <o:ProcessSymbol Id="s3_p82">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((-18000,7000), (-4000,12500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_8_2"/></c:Object>
+  </o:ProcessSymbol>
+
+  <o:ProcessSymbol Id="s3_p83">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((1000,7000), (14000,12500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_8_3"/></c:Object>
+  </o:ProcessSymbol>
+
+  <o:ProcessSymbol Id="s3_p84">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:IconMode>-1</a:IconMode><a:Rect>((16000,7000), (28000,12500))</a:Rect>
+    <a:AutoAdjustToText>0</a:AutoAdjustToText><a:FontList>QNID 0 Arial,9,N
+DISPNAME 0 Arial,9,N</a:FontList>
+    <c:Object><o:Process Ref="p_8_4"/></c:Object>
+  </o:ProcessSymbol>
+
+  <!-- Flows Symbol for Diagram 4 -->
+  <o:ResourceFlowSymbol Id="fs3_10">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-12000,32000), (-12000,24500))</a:Rect>
+    <a:ListOfPoints>((-12000,32000),(-12000,24500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s3_d3"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p81"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_10"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs3_11">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-25000,22500), (-18000,22500))</a:Rect>
+    <a:ListOfPoints>((-25000,22500),(-18000,22500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s3_adminukm"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p81"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_11"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_12">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-8000,24500), (-8000,32000))</a:Rect>
+    <a:ListOfPoints>((-8000,24500),(-8000,32000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p81"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s3_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_12"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs3_13">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-25000,10500), (-18000,10500))</a:Rect>
+    <a:ListOfPoints>((-25000,10500),(-18000,10500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:OrganizationUnitSymbol Ref="s3_superadmin"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p82"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_13"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_14">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((-10000,32000), (-10000,12500))</a:Rect>
+    <a:ListOfPoints>((-10000,32000),(-10000,12500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s3_d3"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p82"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_14"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_15">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((5000,32000), (-4000,12500))</a:Rect>
+    <a:ListOfPoints>((5000,32000),(-4000,12500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s3_d2"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p82"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_15"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_16">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((20000,32000), (-4000,10500))</a:Rect>
+    <a:ListOfPoints>((20000,32000),(-4000,10500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ResourceSymbol Ref="s3_d4"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p82"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_16"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs3_17">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((-4000,9500), (1000,9500))</a:Rect>
+    <a:ListOfPoints>((-4000,9500),(1000,9500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p82"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p83"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_17"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_18">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((7000,12500), (-6000,32000))</a:Rect>
+    <a:ListOfPoints>((7000,12500),(-6000,32000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p83"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s3_d3"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_18"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs3_19">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((7000,12500), (-25000,21000))</a:Rect>
+    <a:ListOfPoints>((7000,12500),(-25000,21000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p83"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s3_adminukm"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_19"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:FlowSymbol Id="fs3_20">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((7000,8000), (-25000,9000))</a:Rect>
+    <a:ListOfPoints>((7000,8000),(-25000,9000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p83"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s3_superadmin"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_20"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:FlowSymbol Id="fs3_21">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((14000,9500), (16000,9500))</a:Rect>
+    <a:ListOfPoints>((14000,9500),(16000,9500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p83"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ProcessSymbol Ref="s3_p84"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_21"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:FlowSymbol Id="fs3_22">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((28000,10500), (30000,10500))</a:Rect>
+    <a:ListOfPoints>((28000,10500),(30000,10500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p84"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s3_email"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_22"/></c:Object>
+  </o:FlowSymbol>
+
+  <o:ResourceFlowSymbol Id="fs3_23">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Rect>((22000,7000), (22000,-1500))</a:Rect>
+    <a:ListOfPoints>((22000,7000),(22000,-1500))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p84"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:ResourceSymbol Ref="s3_d5"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_23"/></c:Object>
+  </o:ResourceFlowSymbol>
+
+  <o:FlowSymbol Id="fs3_24">
+    <a:CreationDate>1793100000</a:CreationDate><a:ModificationDate>1793100000</a:ModificationDate>
+    <a:CenterTextOffset>(0,300)</a:CenterTextOffset>
+    <a:Rect>((28000,8000), (30000,-1000))</a:Rect>
+    <a:ListOfPoints>((28000,8000),(30000,-1000))</a:ListOfPoints>
+    <a:ArrowStyle>1</a:ArrowStyle><a:FontList>CENTER 0 Arial,8,N</a:FontList>
+    <c:SourceSymbol><o:ProcessSymbol Ref="s3_p84"/></c:SourceSymbol>
+    <c:DestinationSymbol><o:OrganizationUnitSymbol Ref="s3_mhs"/></c:DestinationSymbol>
+    <c:Object><o:Flow Ref="f2_24"/></c:Object>
+  </o:FlowSymbol>
+</c:Symbols>
+</o:BusinessProcessDiagram>
+</c:BusinessProcessDiagrams>
+
+<c:DefaultDiagram>
+<o:BusinessProcessDiagram Ref="o10"/>
+</c:DefaultDiagram>
+
+<!-- ============================================================ -->
+<!--  PROCESSES                                                    -->
+<!-- ============================================================ -->
+<c:Processes>
+
+  <!-- Level 0: Sistem Informasi Pendaftaran UKM -->
+  <o:Process Id="p_0">
+    <a:ObjectID>P0000000-0000-0000-0000-000000000000</a:ObjectID>
+    <a:Name>Sistem Informasi Pendaftaran UKM</a:Name>
+    <a:Code>Sistem_Informasi_Pendaftaran_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>0</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <!-- Level 1 Processes -->
+  <o:Process Id="p_1">
+    <a:ObjectID>P1000000-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>Autentikasi dan Login</a:Name>
+    <a:Code>Autentikasi_dan_Login</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>1</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_2">
+    <a:ObjectID>P2000000-0000-0000-0000-000000000002</a:ObjectID>
+    <a:Name>Mengisi Kuesioner Bakat dan Minat</a:Name>
+    <a:Code>Mengisi_Kuesioner_Bakat_dan_Minat</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>2</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_3">
+    <a:ObjectID>P3000000-0000-0000-0000-000000000003</a:ObjectID>
+    <a:Name>Melihat UKM dan Rekomendasi</a:Name>
+    <a:Code>Melihat_UKM_dan_Rekomendasi</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>3</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_4">
+    <a:ObjectID>P4000000-0000-0000-0000-000000000004</a:ObjectID>
+    <a:Name>Mendaftar UKM</a:Name>
+    <a:Code>Mendaftar_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>4</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_5">
+    <a:ObjectID>P5000000-0000-0000-0000-000000000005</a:ObjectID>
+    <a:Name>Membatalkan atau Mengalihkan Pilihan UKM</a:Name>
+    <a:Code>Membatalkan_atau_Mengalihkan_Pilihan_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>5</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_6">
+    <a:ObjectID>P6000000-0000-0000-0000-000000000006</a:ObjectID>
+    <a:Name>Mengecek Status Pendaftaran</a:Name>
+    <a:Code>Mengecek_Status_Pendaftaran</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>6</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_7">
+    <a:ObjectID>P7000000-0000-0000-0000-000000000007</a:ObjectID>
+    <a:Name>Mengelola Informasi UKM</a:Name>
+    <a:Code>Mengelola_Informasi_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>7</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_8">
+    <a:ObjectID>P8000000-0000-0000-0000-000000000008</a:ObjectID>
+    <a:Name>Mengelola Data Peserta</a:Name>
+    <a:Code>Mengelola_Data_Peserta</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>8</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_9">
+    <a:ObjectID>P9000000-0000-0000-0000-000000000009</a:ObjectID>
+    <a:Name>Menjalankan Sistem Seleksi Reguler</a:Name>
+    <a:Code>Menjalankan_Sistem_Seleksi_Reguler</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>9</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_10">
+    <a:ObjectID>P0100000-0000-0000-0000-000000000010</a:ObjectID>
+    <a:Name>Mengirim Notifikasi Email</a:Name>
+    <a:Code>Mengirim_Notifikasi_Email</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>10</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+
+  <!-- === Level 2 Sub-Processes for P4 (Mendaftar UKM) === -->
+  <o:Process Id="p_4_1">
+    <a:ObjectID>P4100000-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>Validasi dan Pilih UKM</a:Name>
+    <a:Code>Validasi_dan_Pilih_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>41</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_4_2">
+    <a:ObjectID>P4200000-0000-0000-0000-000000000002</a:ObjectID>
+    <a:Name>Unggah Berkas Prestasi dan Portofolio</a:Name>
+    <a:Code>Unggah_Berkas_Prestasi_dan_Portofolio</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>42</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_4_3">
+    <a:ObjectID>P4300000-0000-0000-0000-000000000003</a:ObjectID>
+    <a:Name>Terbitkan Nomor Registrasi dan Simpan Pendaftaran</a:Name>
+    <a:Code>Terbitkan_Nomor_Registrasi_dan_Simpan_Pendaftaran</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>43</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <!-- === Level 2 Sub-Processes for P8 & P9 (Seleksi & Verifikasi) === -->
+  <o:Process Id="p_8_1">
+    <a:ObjectID>P8100000-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>Verifikasi Portofolio dan Berkas Atlet</a:Name>
+    <a:Code>Verifikasi_Portofolio_dan_Berkas_Atlet</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>81</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_8_2">
+    <a:ObjectID>P8200000-0000-0000-0000-000000000002</a:ObjectID>
+    <a:Name>Eksekusi Algoritma Seleksi Otomatis</a:Name>
+    <a:Code>Eksekusi_Algoritma_Seleksi_Otomatis</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>82</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_8_3">
+    <a:ObjectID>P8300000-0000-0000-0000-000000000003</a:ObjectID>
+    <a:Name>Penetapan Keputusan dan Update Kelulusan</a:Name>
+    <a:Code>Penetapan_Keputusan_dan_Update_Kelulusan</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>83</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+
+  <o:Process Id="p_8_4">
+    <a:ObjectID>P8400000-0000-0000-0000-000000000004</a:ObjectID>
+    <a:Name>Pengiriman Notifikasi Pengumuman Hasil</a:Name>
+    <a:Code>Pengiriman_Notifikasi_Pengumuman_Hasil</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:NumberID>84</a:NumberID>
+    <a:ActionType>&lt;Undefined&gt;</a:ActionType>
+  </o:Process>
+</c:Processes>
+
+<!-- ============================================================ -->
+<!--  FLOWS                                                        -->
+<!-- ============================================================ -->
+<c:Flows>
+  <!-- Level 0 flows -->
+  <o:Flow Id="f_mhs_sys"><a:ObjectID>F001-0000-0000-0000-000000000001</a:ObjectID><a:Name>Data Registrasi dan Aktivitas Mahasiswa</a:Name><a:Code>f_mhs_sys</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_0"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_mhs"><a:ObjectID>F002-0000-0000-0000-000000000002</a:ObjectID><a:Name>Info Rekomendasi, Status Pendaftaran, Notifikasi</a:Name><a:Code>f_sys_mhs</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f_adminukm_sys"><a:ObjectID>F003-0000-0000-0000-000000000003</a:ObjectID><a:Name>Data UKM dan Data Peserta (Input Admin)</a:Name><a:Code>f_adminukm_sys</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_adminukm"/></c:Object1><c:Object2><o:Process Ref="p_0"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_adminukm"><a:ObjectID>F004-0000-0000-0000-000000000004</a:ObjectID><a:Name>Laporan Peserta dan Info UKM</a:Name><a:Code>f_sys_adminukm</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_adminukm"/></c:Object2></o:Flow>
+  <o:Flow Id="f_superadmin_sys"><a:ObjectID>F005-0000-0000-0000-000000000005</a:ObjectID><a:Name>Perintah Jalankan Seleksi</a:Name><a:Code>f_superadmin_sys</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_superadmin"/></c:Object1><c:Object2><o:Process Ref="p_0"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_superadmin"><a:ObjectID>F006-0000-0000-0000-000000000006</a:ObjectID><a:Name>Laporan Hasil Seleksi</a:Name><a:Code>f_sys_superadmin</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_superadmin"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_email"><a:ObjectID>F007-0000-0000-0000-000000000007</a:ObjectID><a:Name>Request Kirim Email Notifikasi</a:Name><a:Code>f_sys_email</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_email"/></c:Object2></o:Flow>
+  <!-- Data store flows L0 -->
+  <o:Flow Id="f_sys_d1"><a:ObjectID>F008-0000-0000-0000-000000000008</a:ObjectID><a:Name>Simpan Data User</a:Name><a:Code>f_sys_d1</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:Resource Ref="ds_user"/></c:Object2></o:Flow>
+  <o:Flow Id="f_d1_sys"><a:ObjectID>F009-0000-0000-0000-000000000009</a:ObjectID><a:Name>Baca Data User</a:Name><a:Code>f_d1_sys</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_user"/></c:Object1><c:Object2><o:Process Ref="p_0"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_d2"><a:ObjectID>F010-0000-0000-0000-000000000010</a:ObjectID><a:Name>Simpan atau Update Data UKM</a:Name><a:Code>f_sys_d2</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:Resource Ref="ds_ukm"/></c:Object2></o:Flow>
+  <o:Flow Id="f_d2_sys"><a:ObjectID>F011-0000-0000-0000-000000000011</a:ObjectID><a:Name>Baca Data UKM</a:Name><a:Code>f_d2_sys</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_ukm"/></c:Object1><c:Object2><o:Process Ref="p_0"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_d3"><a:ObjectID>F012-0000-0000-0000-000000000012</a:ObjectID><a:Name>Simpan atau Update Data Pendaftaran</a:Name><a:Code>f_sys_d3</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_d4"><a:ObjectID>F013-0000-0000-0000-000000000013</a:ObjectID><a:Name>Simpan Hasil Kuesioner</a:Name><a:Code>f_sys_d4</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:Resource Ref="ds_kuesioner"/></c:Object2></o:Flow>
+  <o:Flow Id="f_sys_d5"><a:ObjectID>F014-0000-0000-0000-000000000014</a:ObjectID><a:Name>Simpan Log Notifikasi</a:Name><a:Code>f_sys_d5</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_0"/></c:Object1><c:Object2><o:Resource Ref="ds_notifikasi"/></c:Object2></o:Flow>
+
+  <!-- Level 1 flows -->
+  <o:Flow Id="f1_01"><a:ObjectID>G001-0000-0000-0000-000000000001</a:ObjectID><a:Name>Kredensial Login</a:Name><a:Code>f1_01</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_02"><a:ObjectID>G002-0000-0000-0000-000000000002</a:ObjectID><a:Name>Jawaban Kuesioner Bakat dan Minat</a:Name><a:Code>f1_02</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_03"><a:ObjectID>G003-0000-0000-0000-000000000003</a:ObjectID><a:Name>Request Lihat Daftar UKM</a:Name><a:Code>f1_03</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_3"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_04"><a:ObjectID>G004-0000-0000-0000-000000000004</a:ObjectID><a:Name>Data Pilihan UKM (Maks 4, Prioritas)</a:Name><a:Code>f1_04</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_4"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_05"><a:ObjectID>G005-0000-0000-0000-000000000005</a:ObjectID><a:Name>Permintaan Batal atau Alih Pilihan</a:Name><a:Code>f1_05</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_5"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_06"><a:ObjectID>G006-0000-0000-0000-000000000006</a:ObjectID><a:Name>Request Cek Status</a:Name><a:Code>f1_06</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_6"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_07"><a:ObjectID>G007-0000-0000-0000-000000000007</a:ObjectID><a:Name>JWT Token Sesi</a:Name><a:Code>f1_07</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_1"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_08"><a:ObjectID>G008-0000-0000-0000-000000000008</a:ObjectID><a:Name>Simpan Data Registrasi User</a:Name><a:Code>f1_08</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_1"/></c:Object1><c:Object2><o:Resource Ref="ds_user"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_09"><a:ObjectID>G009-0000-0000-0000-000000000009</a:ObjectID><a:Name>Verifikasi Kredensial User</a:Name><a:Code>f1_09</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_user"/></c:Object1><c:Object2><o:Process Ref="p_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_10"><a:ObjectID>G010-0000-0000-0000-000000000010</a:ObjectID><a:Name>Simpan Jawaban dan Skor Kuesioner</a:Name><a:Code>f1_10</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_2"/></c:Object1><c:Object2><o:Resource Ref="ds_kuesioner"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_11"><a:ObjectID>G011-0000-0000-0000-000000000011</a:ObjectID><a:Name>Skor Bakat dan Minat untuk Rekomendasi</a:Name><a:Code>f1_11</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_2"/></c:Object1><c:Object2><o:Process Ref="p_3"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_12"><a:ObjectID>G012-0000-0000-0000-000000000012</a:ObjectID><a:Name>Data Daftar UKM Tersedia</a:Name><a:Code>f1_12</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_ukm"/></c:Object1><c:Object2><o:Process Ref="p_3"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_13"><a:ObjectID>G013-0000-0000-0000-000000000013</a:ObjectID><a:Name>Tampilan UKM dan Rekomendasi</a:Name><a:Code>f1_13</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_3"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_14"><a:ObjectID>G014-0000-0000-0000-000000000014</a:ObjectID><a:Name>Simpan Data Pendaftaran UKM</a:Name><a:Code>f1_14</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_15"><a:ObjectID>G015-0000-0000-0000-000000000015</a:ObjectID><a:Name>Baca Status Pendaftaran Sebelumnya</a:Name><a:Code>f1_15</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_pendaftaran"/></c:Object1><c:Object2><o:Process Ref="p_4"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_16"><a:ObjectID>G016-0000-0000-0000-000000000016</a:ObjectID><a:Name>Nomor Referensi Pendaftaran</a:Name><a:Code>f1_16</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_17"><a:ObjectID>G017-0000-0000-0000-000000000017</a:ObjectID><a:Name>Update Status Batal atau Alih</a:Name><a:Code>f1_17</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_5"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_18"><a:ObjectID>G018-0000-0000-0000-000000000018</a:ObjectID><a:Name>Data Status Pendaftaran</a:Name><a:Code>f1_18</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_pendaftaran"/></c:Object1><c:Object2><o:Process Ref="p_6"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_19"><a:ObjectID>G019-0000-0000-0000-000000000019</a:ObjectID><a:Name>Info Status Pendaftaran (Pending, Diterima, Ditolak)</a:Name><a:Code>f1_19</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_6"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_20"><a:ObjectID>G020-0000-0000-0000-000000000020</a:ObjectID><a:Name>Data Informasi UKM Baru atau Update</a:Name><a:Code>f1_20</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_adminukm"/></c:Object1><c:Object2><o:Process Ref="p_7"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_21"><a:ObjectID>G021-0000-0000-0000-000000000021</a:ObjectID><a:Name>Update Status Penerimaan Peserta</a:Name><a:Code>f1_21</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_adminukm"/></c:Object1><c:Object2><o:Process Ref="p_8"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_22"><a:ObjectID>G022-0000-0000-0000-000000000022</a:ObjectID><a:Name>Simpan atau Update Info UKM ke DB</a:Name><a:Code>f1_22</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_7"/></c:Object1><c:Object2><o:Resource Ref="ds_ukm"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_23"><a:ObjectID>G023-0000-0000-0000-000000000023</a:ObjectID><a:Name>Update Status Peserta di DB Pendaftaran</a:Name><a:Code>f1_23</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_24"><a:ObjectID>G024-0000-0000-0000-000000000024</a:ObjectID><a:Name>Perintah Jalankan Seleksi</a:Name><a:Code>f1_24</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_superadmin"/></c:Object1><c:Object2><o:Process Ref="p_9"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_25"><a:ObjectID>G025-0000-0000-0000-000000000025</a:ObjectID><a:Name>Hasil Keputusan Seleksi (Diterima atau Ditolak)</a:Name><a:Code>f1_25</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_9"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_26"><a:ObjectID>G026-0000-0000-0000-000000000026</a:ObjectID><a:Name>Trigger Notifikasi Hasil Seleksi</a:Name><a:Code>f1_26</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_9"/></c:Object1><c:Object2><o:Process Ref="p_10"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_27"><a:ObjectID>G027-0000-0000-0000-000000000027</a:ObjectID><a:Name>Request Kirim Email via SMTP</a:Name><a:Code>f1_27</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_10"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_email"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_28"><a:ObjectID>G028-0000-0000-0000-000000000028</a:ObjectID><a:Name>Simpan Log Notifikasi Email</a:Name><a:Code>f1_28</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_10"/></c:Object1><c:Object2><o:Resource Ref="ds_notifikasi"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_29"><a:ObjectID>G029-0000-0000-0000-000000000029</a:ObjectID><a:Name>Notifikasi Hasil (Diterima atau Ditolak)</a:Name><a:Code>f1_29</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_10"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_30"><a:ObjectID>G030-0000-0000-0000-000000000030</a:ObjectID><a:Name>Laporan Data Peserta per UKM</a:Name><a:Code>f1_30</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_adminukm"/></c:Object2></o:Flow>
+  <o:Flow Id="f1_31"><a:ObjectID>G031-0000-0000-0000-000000000031</a:ObjectID><a:Name>Laporan Hasil Seleksi Reguler</a:Name><a:Code>f1_31</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_9"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_superadmin"/></c:Object2></o:Flow>
+
+  <!-- Level 2 Flows: P4 -->
+  <o:Flow Id="f2_01"><a:ObjectID>F201-0000-0000-0000-000000000001</a:ObjectID><a:Name>Pilihan UKM (Maks 4, Prioritas)</a:Name><a:Code>f2_01</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_4_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_02"><a:ObjectID>F202-0000-0000-0000-000000000002</a:ObjectID><a:Name>Cek Kuota dan Prasyarat UKM</a:Name><a:Code>f2_02</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_ukm"/></c:Object1><c:Object2><o:Process Ref="p_4_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_03"><a:ObjectID>F203-0000-0000-0000-000000000003</a:ObjectID><a:Name>Data Pilihan Tervalidasi</a:Name><a:Code>f2_03</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4_1"/></c:Object1><c:Object2><o:Process Ref="p_4_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_04"><a:ObjectID>F204-0000-0000-0000-000000000004</a:ObjectID><a:Name>Unggah Berkas Prestasi / Portofolio Atlet</a:Name><a:Code>f2_04</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_mhs"/></c:Object1><c:Object2><o:Process Ref="p_4_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_05"><a:ObjectID>F205-0000-0000-0000-000000000005</a:ObjectID><a:Name>Berkas dan Pilihan Lengkap</a:Name><a:Code>f2_05</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4_2"/></c:Object1><c:Object2><o:Process Ref="p_4_3"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_06"><a:ObjectID>F206-0000-0000-0000-000000000006</a:ObjectID><a:Name>Simpan Data Pendaftaran Baru</a:Name><a:Code>f2_06</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4_3"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_07"><a:ObjectID>F207-0000-0000-0000-000000000007</a:ObjectID><a:Name>Nomor Registrasi dan Bukti Pendaftaran</a:Name><a:Code>f2_07</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_4_3"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+
+  <!-- Level 2 Flows: P8 & P9 -->
+  <o:Flow Id="f2_10"><a:ObjectID>F210-0000-0000-0000-000000000010</a:ObjectID><a:Name>Data Berkas dan Portofolio Pendaftar</a:Name><a:Code>f2_10</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_pendaftaran"/></c:Object1><c:Object2><o:Process Ref="p_8_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_11"><a:ObjectID>F211-0000-0000-0000-000000000011</a:ObjectID><a:Name>Hasil Verifikasi Berkas (Valid/Invalid)</a:Name><a:Code>f2_11</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_adminukm"/></c:Object1><c:Object2><o:Process Ref="p_8_1"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_12"><a:ObjectID>F212-0000-0000-0000-000000000012</a:ObjectID><a:Name>Update Status Verifikasi Berkas</a:Name><a:Code>f2_12</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_1"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_13"><a:ObjectID>F213-0000-0000-0000-000000000013</a:ObjectID><a:Name>Perintah Jalankan Seleksi Otomatis</a:Name><a:Code>f2_13</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:OrganizationUnit Ref="ou_superadmin"/></c:Object1><c:Object2><o:Process Ref="p_8_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_14"><a:ObjectID>F214-0000-0000-0000-000000000014</a:ObjectID><a:Name>Data Pendaftar Terverifikasi</a:Name><a:Code>f2_14</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_pendaftaran"/></c:Object1><c:Object2><o:Process Ref="p_8_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_15"><a:ObjectID>F215-0000-0000-0000-000000000015</a:ObjectID><a:Name>Data Kuota Maksimal UKM</a:Name><a:Code>f2_15</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_ukm"/></c:Object1><c:Object2><o:Process Ref="p_8_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_16"><a:ObjectID>F216-0000-0000-0000-000000000016</a:ObjectID><a:Name>Data Skor Minat dan Bakat</a:Name><a:Code>f2_16</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Resource Ref="ds_kuesioner"/></c:Object1><c:Object2><o:Process Ref="p_8_2"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_17"><a:ObjectID>F217-0000-0000-0000-000000000017</a:ObjectID><a:Name>Hasil Perankingan Berdasarkan Prioritas</a:Name><a:Code>f2_17</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_2"/></c:Object1><c:Object2><o:Process Ref="p_8_3"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_18"><a:ObjectID>F218-0000-0000-0000-000000000018</a:ObjectID><a:Name>Simpan Status Akhir (Diterima / Ditolak)</a:Name><a:Code>f2_18</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_3"/></c:Object1><c:Object2><o:Resource Ref="ds_pendaftaran"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_19"><a:ObjectID>F219-0000-0000-0000-000000000019</a:ObjectID><a:Name>Laporan Hasil Seleksi Anggota Baru</a:Name><a:Code>f2_19</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_3"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_adminukm"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_20"><a:ObjectID>F220-0000-0000-0000-000000000020</a:ObjectID><a:Name>Rekapitulasi Hasil Seleksi Keseluruhan</a:Name><a:Code>f2_20</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_3"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_superadmin"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_21"><a:ObjectID>F221-0000-0000-0000-000000000021</a:ObjectID><a:Name>Trigger Pengumuman Kelulusan</a:Name><a:Code>f2_21</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_3"/></c:Object1><c:Object2><o:Process Ref="p_8_4"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_22"><a:ObjectID>F222-0000-0000-0000-000000000022</a:ObjectID><a:Name>Request Kirim Email Pengumuman via SMTP</a:Name><a:Code>f2_22</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_4"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_email"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_23"><a:ObjectID>F223-0000-0000-0000-000000000023</a:ObjectID><a:Name>Catat Riwayat Log Notifikasi</a:Name><a:Code>f2_23</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_4"/></c:Object1><c:Object2><o:Resource Ref="ds_notifikasi"/></c:Object2></o:Flow>
+  <o:Flow Id="f2_24"><a:ObjectID>F224-0000-0000-0000-000000000024</a:ObjectID><a:Name>Notifikasi Pengumuman Status Seleksi</a:Name><a:Code>f2_24</a:Code><a:CreationDate>1793100000</a:CreationDate><a:Creator>yafi</a:Creator><a:ModificationDate>1793100000</a:ModificationDate><a:Modifier>yafi</a:Modifier><a:FlowType>Success</a:FlowType><c:Object1><o:Process Ref="p_8_4"/></c:Object1><c:Object2><o:OrganizationUnit Ref="ou_mhs"/></c:Object2></o:Flow>
+</c:Flows>
+
+<!-- ============================================================ -->
+<!--  ORGANIZATION UNITS (External Entities)                       -->
+<!-- ============================================================ -->
+<c:OrganizationUnits>
+  <o:OrganizationUnit Id="ou_mhs">
+    <a:ObjectID>OU01-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>Mahasiswa</a:Name>
+    <a:Code>Mahasiswa</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>External Entity</a:Stereotype>
+  </o:OrganizationUnit>
+
+  <o:OrganizationUnit Id="ou_adminukm">
+    <a:ObjectID>OU02-0000-0000-0000-000000000002</a:ObjectID>
+    <a:Name>Admin UKM</a:Name>
+    <a:Code>Admin_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>External Entity</a:Stereotype>
+  </o:OrganizationUnit>
+
+  <o:OrganizationUnit Id="ou_superadmin">
+    <a:ObjectID>OU03-0000-0000-0000-000000000003</a:ObjectID>
+    <a:Name>Super Admin</a:Name>
+    <a:Code>Super_Admin</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>External Entity</a:Stereotype>
+  </o:OrganizationUnit>
+
+  <o:OrganizationUnit Id="ou_email">
+    <a:ObjectID>OU04-0000-0000-0000-000000000004</a:ObjectID>
+    <a:Name>Sistem Kirim Email</a:Name>
+    <a:Code>Sistem_Kirim_Email</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>External Entity</a:Stereotype>
+  </o:OrganizationUnit>
+</c:OrganizationUnits>
+
+<!-- ============================================================ -->
+<!--  RESOURCES (Data Stores)                                      -->
+<!-- ============================================================ -->
+<c:Resources>
+  <o:Resource Id="ds_user">
+    <a:ObjectID>DS01-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>D1 Data User</a:Name>
+    <a:Code>D1_Data_User</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>Data Store</a:Stereotype>
+    <a:NumberID>1</a:NumberID>
+  </o:Resource>
+
+  <o:Resource Id="ds_ukm">
+    <a:ObjectID>DS02-0000-0000-0000-000000000002</a:ObjectID>
+    <a:Name>D2 Data UKM</a:Name>
+    <a:Code>D2_Data_UKM</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>Data Store</a:Stereotype>
+    <a:NumberID>2</a:NumberID>
+  </o:Resource>
+
+  <o:Resource Id="ds_pendaftaran">
+    <a:ObjectID>DS03-0000-0000-0000-000000000003</a:ObjectID>
+    <a:Name>D3 Data Pendaftaran</a:Name>
+    <a:Code>D3_Data_Pendaftaran</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>Data Store</a:Stereotype>
+    <a:NumberID>3</a:NumberID>
+  </o:Resource>
+
+  <o:Resource Id="ds_kuesioner">
+    <a:ObjectID>DS04-0000-0000-0000-000000000004</a:ObjectID>
+    <a:Name>D4 Data Kuesioner dan Skor</a:Name>
+    <a:Code>D4_Data_Kuesioner_dan_Skor</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>Data Store</a:Stereotype>
+    <a:NumberID>4</a:NumberID>
+  </o:Resource>
+
+  <o:Resource Id="ds_notifikasi">
+    <a:ObjectID>DS05-0000-0000-0000-000000000005</a:ObjectID>
+    <a:Name>D5 Log Notifikasi Email</a:Name>
+    <a:Code>D5_Log_Notifikasi_Email</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:Stereotype>Data Store</a:Stereotype>
+    <a:NumberID>5</a:NumberID>
+  </o:Resource>
+</c:Resources>
+
+<c:TargetModels>
+  <o:TargetModel Id="tm1">
+    <a:ObjectID>TM01-0000-0000-0000-000000000001</a:ObjectID>
+    <a:Name>Data Flow Diagram</a:Name>
+    <a:Code>DFD</a:Code>
+    <a:CreationDate>1793100000</a:CreationDate>
+    <a:Creator>yafi</a:Creator>
+    <a:ModificationDate>1793100000</a:ModificationDate>
+    <a:Modifier>yafi</a:Modifier>
+    <a:TargetModelURL>file:///%_PRCSLANG%/Data Flow Diagram.xpl</a:TargetModelURL>
+    <a:TargetModelID>B45F50B7-1927-406E-A25B-E8AFB1C13854</a:TargetModelID>
+    <a:TargetModelClassID>7141CE88-2107-423A-A5D4-23B73A90B769</a:TargetModelClassID>
+    <a:TargetModelLastModificationDate>1284958041</a:TargetModelLastModificationDate>
+    <c:SessionShortcuts>
+      <o:Shortcut Ref="o3"/>
+    </c:SessionShortcuts>
+  </o:TargetModel>
+</c:TargetModels>
+
+</o:Model>
+</c:Children>
+</o:RootObject>
+
+</Model>

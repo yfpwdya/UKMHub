@@ -1,0 +1,714 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="draw.io" version="21.0.0" type="device">
+  <diagram id="context-diagram" name="Context Diagram (Level 0)">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title0" value="Context Diagram (DFD Level 0) — UKMHub Registration System" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0050EF;" vertex="1" parent="1">
+          <mxGeometry x="377" y="30" width="900" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== CENTRAL PROCESS ===== -->
+        <mxCell id="P0" value="&lt;b&gt;0&lt;/b&gt;&lt;br&gt;UKMHub&lt;br&gt;Registration&lt;br&gt;System" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontColor=#000000;align=center;" vertex="1" parent="1">
+          <mxGeometry x="677" y="434" width="300" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EXTERNAL ENTITIES ===== -->
+        <!-- Mahasiswa -->
+        <mxCell id="EXT1" value="&lt;b&gt;Mahasiswa&lt;/b&gt;&lt;br&gt;(Pendaftar)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="130" y="474" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Admin/Staff -->
+        <mxCell id="EXT2" value="&lt;b&gt;Admin / Staff UKM&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="677" y="200" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Email Service -->
+        <mxCell id="EXT3" value="&lt;b&gt;Email Service&lt;/b&gt;&lt;br&gt;(Nodemailer / SMTP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="474" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- PostgreSQL -->
+        <mxCell id="EXT4" value="&lt;b&gt;PostgreSQL&lt;/b&gt;&lt;br&gt;Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="677" y="800" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===== ARROWS: Mahasiswa → System ===== -->
+        <mxCell id="f1" value="Registrasi Akun (NIM, Email, Password)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT1" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="Login (NIM/Email + Password)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT1" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="Jawaban Kuisioner" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.65;exitDx=0;exitDy=0;entryX=0;entryY=0.65;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT1" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="Pilihan UKM (maks 4, prioritas)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT1" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- System → Mahasiswa -->
+        <mxCell id="f5" value="JWT Token" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.35;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="P0" target="EXT1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" value="Skor Bakat + Rekomendasi UKM" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="P0" target="EXT1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" value="Status Pendaftaran (pending/accepted/rejected)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.65;exitDx=0;exitDy=0;entryX=1;entryY=0.65;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="P0" target="EXT1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" value="No. Referensi Pendaftaran" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="P0" target="EXT1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin → System -->
+        <mxCell id="f9" value="Update Status Pendaftaran" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT2" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" value="Run Auto-Seleksi / Kelola Jadwal" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT2" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" value="Verifikasi Portofolio Atlet" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.7;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="EXT2" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- System → Admin -->
+        <mxCell id="f12" value="Statistik Pendaftaran / Data User" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.3;exitY=0;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="P0" target="EXT2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- System → Email -->
+        <mxCell id="f13" value="Notifikasi Email (accepted/rejected/pending)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="P0" target="EXT3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14" value="Email Log (sent/failed)" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="EXT3" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- System ↔ PostgreSQL -->
+        <mxCell id="f15" value="INSERT / UPDATE / SELECT Data" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;fontSize=10;" edge="1" source="P0" target="EXT4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f16" value="Query Result / Row Data" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.6;exitY=0;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;fontSize=10;dashed=1;" edge="1" source="EXT4" target="P0" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="leg0" value="LEGEND" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="Entitas Eksternal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="695" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="Proses Utama" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="275" y="695" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="Aliran Data Masuk" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" parent="1">
+          <mxGeometry x="420" y="710" width="130" height="10" relative="1" as="geometry">
+            <mxPoint x="420" y="710" as="sourcePoint" />
+            <mxPoint x="550" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4" value="Aliran Data Keluar" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="730" as="sourcePoint" />
+            <mxPoint x="550" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="dfd-level1" name="DFD Level 1 - Detail Proses">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="t1" value="DFD Level 1 — Detail Proses UKMHub Registration System" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#0050EF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="30" width="1300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EXTERNAL ENTITIES ===== -->
+        <mxCell id="E1" value="&lt;b&gt;Mahasiswa&lt;/b&gt;&lt;br&gt;(Pendaftar)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="700" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" value="&lt;b&gt;Admin / Staff UKM&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="400" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" value="&lt;b&gt;Email Service&lt;/b&gt;&lt;br&gt;(SMTP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="900" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===== DATA STORES ===== -->
+        <!-- D1 users -->
+        <mxCell id="D1" value="D1  |  users" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D2 ukm -->
+        <mxCell id="D2" value="D2  |  ukm" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="280" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D3 questions/answers -->
+        <mxCell id="D3" value="D3  |  questions / answers" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="360" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D4 questionnaire_results -->
+        <mxCell id="D4" value="D4  |  questionnaire_results" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D5 registrations -->
+        <mxCell id="D5" value="D5  |  registrations" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D6 interview_bookings -->
+        <mxCell id="D6" value="D6  |  interview_bookings" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="600" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D7 schedules -->
+        <mxCell id="D7" value="D7  |  schedules" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="200" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D8 athlete_portfolios -->
+        <mxCell id="D8" value="D8  |  athlete_portfolios" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="280" width="220" height="50" as="geometry" />
+        </mxCell>
+        <!-- D9 email_logs -->
+        <mxCell id="D9" value="D9  |  email_logs" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="360" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PROCESSES ===== -->
+        <!-- P1: Autentikasi & Registrasi -->
+        <mxCell id="P1" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Autentikasi &amp;amp;&lt;br&gt;Registrasi Akun" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P2: Proses Kuisioner -->
+        <mxCell id="P2" value="&lt;b&gt;P2&lt;/b&gt;&lt;br&gt;Proses Kuisioner&lt;br&gt;(step-by-step)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="480" y="460" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P3: Kalkulasi Skor -->
+        <mxCell id="P3" value="&lt;b&gt;P3&lt;/b&gt;&lt;br&gt;Kalkulasi Skor &amp;amp;&lt;br&gt;Rekomendasi UKM" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="480" y="700" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P4: Pemilihan UKM -->
+        <mxCell id="P4" value="&lt;b&gt;P4&lt;/b&gt;&lt;br&gt;Pemilihan &amp;amp;&lt;br&gt;Pendaftaran UKM" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="900" y="460" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P5: Booking Interview -->
+        <mxCell id="P5" value="&lt;b&gt;P5&lt;/b&gt;&lt;br&gt;Booking Jadwal&lt;br&gt;Interview" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="900" y="700" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P6: Manajemen Admin -->
+        <mxCell id="P6" value="&lt;b&gt;P6&lt;/b&gt;&lt;br&gt;Manajemen Admin&lt;br&gt;&amp;amp; Auto-Seleksi" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="340" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P7: Notifikasi Email -->
+        <mxCell id="P7" value="&lt;b&gt;P7&lt;/b&gt;&lt;br&gt;Notifikasi&lt;br&gt;Email" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="840" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P8: Portofolio Atlet -->
+        <mxCell id="P8" value="&lt;b&gt;P8&lt;/b&gt;&lt;br&gt;Submit &amp;amp; Verifikasi&lt;br&gt;Portofolio Atlet" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="580" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- ===== FLOWS ===== -->
+
+        <!-- Mahasiswa → P1 -->
+        <mxCell id="mf01" value="NIM, Email, Password" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="E1" target="P1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P1 ↔ D1 -->
+        <mxCell id="mf02" value="Simpan / Cek User" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P1" target="D1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mf03" value="Data User (id, hash pw)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" source="D1" target="P1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="215" />
+              <mxPoint x="170" y="195" />
+              <mxPoint x="460" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P1 → Mahasiswa -->
+        <mxCell id="mf04" value="JWT Token" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="P1" target="E1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Mahasiswa → P2 -->
+        <mxCell id="mf05" value="Jawaban Kuisioner" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="E1" target="P2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- D3 → P2 -->
+        <mxCell id="mf06" value="Ambil Soal &amp; Bobot Jawaban" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" source="D3" target="P2" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="385" />
+              <mxPoint x="460" y="385" />
+              <mxPoint x="460" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P2 → P3 -->
+        <mxCell id="mf07" value="Semua Jawaban Terkumpul" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="P2" target="P3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P3 → D4 -->
+        <mxCell id="mf08" value="Simpan Skor &amp; Rekomendasi" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P3" target="D4" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="755" />
+              <mxPoint x="170" y="755" />
+              <mxPoint x="170" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P3 → Mahasiswa -->
+        <mxCell id="mf09" value="Skor Bakat + Rekomendasi UKM" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="P3" target="E1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- D2 → P4 -->
+        <mxCell id="mf10" value="Daftar UKM Tersedia" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" source="D2" target="P4" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="305" />
+              <mxPoint x="880" y="305" />
+              <mxPoint x="880" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Mahasiswa → P4 -->
+        <mxCell id="mf11" value="Pilihan UKM (maks 4, urutan prioritas)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="E1" target="P4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P4 → D5 -->
+        <mxCell id="mf12" value="Submit Pendaftaran (ukm_choices, result_id)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P4" target="D5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="515" />
+              <mxPoint x="170" y="515" />
+              <mxPoint x="170" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P4 → Mahasiswa -->
+        <mxCell id="mf13" value="No. Referensi Pendaftaran" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" edge="1" source="P4" target="E1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Mahasiswa → P5 -->
+        <mxCell id="mf14" value="Pilih Slot Jadwal Interview" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.9;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="E1" target="P5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- D7 → P5 -->
+        <mxCell id="mf15" value="Slot Jadwal Tersedia" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" source="D7" target="P5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1700" y="225" />
+              <mxPoint x="1120" y="225" />
+              <mxPoint x="1120" y="755" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P5 → D6 -->
+        <mxCell id="mf16" value="Simpan Booking Interview" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P5" target="D6" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="755" />
+              <mxPoint x="170" y="755" />
+              <mxPoint x="170" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P5 → Mahasiswa -->
+        <mxCell id="mf17" value="Konfirmasi Jadwal Interview" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=1;entryY=0.9;entryDx=0;entryDy=0;" edge="1" source="P5" target="E1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P4 → P6 -->
+        <mxCell id="mf18" value="Data Pendaftaran Baru" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" source="P4" target="P6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin → P6 -->
+        <mxCell id="mf19" value="Update Status / Run Seleksi" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="E2" target="P6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6 → Admin -->
+        <mxCell id="mf20" value="Statistik &amp; Laporan Pendaftaran" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P6" target="E2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6 → D5 -->
+        <mxCell id="mf21" value="Update Status (accepted/rejected)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P6" target="D5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="395" />
+              <mxPoint x="170" y="395" />
+              <mxPoint x="170" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- D5 → P6 -->
+        <mxCell id="mf22" value="Data Semua Pendaftaran" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;" edge="1" source="D5" target="P6" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="535" />
+              <mxPoint x="1360" y="535" />
+              <mxPoint x="1360" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6 → P7 -->
+        <mxCell id="mf23" value="Trigger Notifikasi (user_id, status, ukm)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="P6" target="P7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1480" y="600" />
+              <mxPoint x="1480" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P7 → E3 (Email) -->
+        <mxCell id="mf24" value="Kirim Email Notifikasi" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P7" target="E3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P7 → D9 -->
+        <mxCell id="mf25" value="Catat Email Log (sent/failed)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P7" target="D9" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="895" />
+              <mxPoint x="1810" y="895" />
+              <mxPoint x="1810" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Admin → P8 -->
+        <mxCell id="mf26" value="Verifikasi Portofolio Atlet" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="E2" target="P8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Mahasiswa → P8 -->
+        <mxCell id="mf27" value="Submit Portofolio Atlet" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" source="E1" target="P8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P8 → D8 -->
+        <mxCell id="mf28" value="Simpan / Update Portofolio" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P8" target="D8" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="635" />
+              <mxPoint x="1810" y="635" />
+              <mxPoint x="1810" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Admin → P6 (Kelola Jadwal via P6) -->
+        <mxCell id="mf29" value="Kelola Jadwal Interview" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="E2" target="P6" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1940" y="422" />
+              <mxPoint x="1940" y="350" />
+              <mxPoint x="1600" y="350" />
+              <mxPoint x="1600" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6 → D7 -->
+        <mxCell id="mf30" value="Buat / Hapus Jadwal" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;" edge="1" source="P6" target="D7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="355" />
+              <mxPoint x="1810" y="355" />
+              <mxPoint x="1810" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="dfd-level2" name="DFD Level 2 - Admin &amp; Staff Subsystem">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- TITLE -->
+        <mxCell id="t2" value="DFD Level 2 — Subsystem P6: Manajemen Admin, Staff &amp; Auto-Seleksi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1;fontColor=#0050EF;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="1150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EXTERNAL ENTITIES ===== -->
+        <mxCell id="A1" value="&lt;b&gt;Admin Sistem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" value="&lt;b&gt;Staff UKM&lt;/b&gt;&lt;br&gt;(Pengurus)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A3" value="&lt;b&gt;Mahasiswa&lt;/b&gt;&lt;br&gt;(Penerima Notif)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="60" y="850" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="A4" value="&lt;b&gt;Email Service&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="850" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== DATA STORES ===== -->
+        <mxCell id="AD1" value="D1  |  users" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="120" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AD5" value="D5  |  registrations" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="200" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AD7" value="D7  |  schedules" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="480" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AD8" value="D8  |  athlete_portfolios" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="560" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AD9" value="D9  |  email_logs" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="840" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AD2" value="D2  |  ukm" style="shape=mxgraph.dfd.dataStore;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="640" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ===== PROCESSES ===== -->
+        <!-- P6.1 Admin Login -->
+        <mxCell id="P61" value="&lt;b&gt;P6.1&lt;/b&gt;&lt;br&gt;Autentikasi Admin&lt;br&gt;(JWT)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P6.2 Dashboard Statistik -->
+        <mxCell id="P62" value="&lt;b&gt;P6.2&lt;/b&gt;&lt;br&gt;Dashboard &amp;amp;&lt;br&gt;Statistik" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="130" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P6.3 Kelola Pendaftar -->
+        <mxCell id="P63" value="&lt;b&gt;P6.3&lt;/b&gt;&lt;br&gt;Kelola Data&lt;br&gt;Pendaftar" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="130" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P6.4 Run Auto Seleksi -->
+        <mxCell id="P64" value="&lt;b&gt;P6.4&lt;/b&gt;&lt;br&gt;Run Auto-Seleksi&lt;br&gt;(by Priority &amp;amp; Quota)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="770" y="360" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- P6.5 Kelola Jadwal -->
+        <mxCell id="P65" value="&lt;b&gt;P6.5&lt;/b&gt;&lt;br&gt;Kelola Jadwal&lt;br&gt;Interview" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="470" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P6.6 Verifikasi Portofolio -->
+        <mxCell id="P66" value="&lt;b&gt;P6.6&lt;/b&gt;&lt;br&gt;Verifikasi&lt;br&gt;Portofolio Atlet" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="470" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P6.7 Kelola UKM -->
+        <mxCell id="P67" value="&lt;b&gt;P6.7&lt;/b&gt;&lt;br&gt;Kelola Data UKM&lt;br&gt;(CRUD)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="470" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- P7 Notifikasi Email -->
+        <mxCell id="AP7" value="&lt;b&gt;P7&lt;/b&gt;&lt;br&gt;Kirim Notifikasi&lt;br&gt;Email" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="770" y="800" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ===== FLOWS ===== -->
+
+        <!-- Admin → P6.1 -->
+        <mxCell id="af01" value="Kredensial Admin" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="A1" target="P61" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.1 → P6.2 -->
+        <mxCell id="af02" value="Admin JWT Token" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P61" target="P62" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.2 → P6.3 -->
+        <mxCell id="af03" value="Akses Detail Pendaftar" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P62" target="P63" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.2 ↔ D5 -->
+        <mxCell id="af04" value="Query Statistik" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P62" target="AD5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af05" value="Total / Jumlah Data" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="AD5" target="P62" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.2 ↔ D1 -->
+        <mxCell id="af06" value="Query Jumlah User" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P62" target="AD1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.3 → Admin (output) -->
+        <mxCell id="af07" value="Detail Pendaftar (nama, NIM, UKM pilihan)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="P63" target="A1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="145" />
+              <mxPoint x="240" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Admin → P6.3 (approve/reject manual) -->
+        <mxCell id="af08" value="Approve / Reject Manual" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" edge="1" source="A1" target="P63" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="180" />
+              <mxPoint x="240" y="200" />
+              <mxPoint x="920" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6.3 ↔ D5 -->
+        <mxCell id="af09" value="Update Status (accepted/rejected)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="P63" target="AD5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.3 → P6.4 (trigger auto seleksi) -->
+        <mxCell id="af10" value="Trigger Auto-Seleksi" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="P63" target="P64" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.4 → D5 (massal update) -->
+        <mxCell id="af11" value="Update Status Massal (accepted/rejected)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="P64" target="AD5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- D5 → P6.4 -->
+        <mxCell id="af12" value="Data Pendaftaran (prioritas, kuota)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="AD5" target="P64" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="220" />
+              <mxPoint x="1000" y="220" />
+              <mxPoint x="1000" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6.4 → P7 (trigger notif massal) -->
+        <mxCell id="af13" value="Trigger Notif Massal (user, status, ukm)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;strokeColor=#82b366;fontColor=#006600;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="P64" target="AP7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.3 → P7 (trigger notif manual) -->
+        <mxCell id="af14" value="Trigger Notif Manual" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="P63" target="AP7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="250" />
+              <mxPoint x="740" y="250" />
+              <mxPoint x="740" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P7 → Email Service -->
+        <mxCell id="af15" value="Kirim Email (subject, html)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="AP7" target="A4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P7 → Mahasiswa -->
+        <mxCell id="af16" value="Notifikasi Diterima/Ditolak" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="AP7" target="A3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P7 → D9 (log) -->
+        <mxCell id="af17" value="Catat Log Email (sent/failed)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="AP7" target="AD9" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Staff → P6.5 -->
+        <mxCell id="af18" value="Buat / Hapus Slot Jadwal" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="A2" target="P65" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P6.5 ↔ D7 -->
+        <mxCell id="af19" value="Simpan Jadwal Baru" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="P65" target="AD7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af20" value="Data Jadwal Aktif" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="AD7" target="P65" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Staff → P6.6 -->
+        <mxCell id="af21" value="Verifikasi / Tolak Portofolio" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="A2" target="P66" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="530" />
+              <mxPoint x="240" y="560" />
+              <mxPoint x="610" y="560" />
+              <mxPoint x="610" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6.6 ↔ D8 -->
+        <mxCell id="af22" value="Update Status Portofolio" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="P66" target="AD8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af23" value="Data Portofolio" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="AD8" target="P66" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin → P6.7 -->
+        <mxCell id="af24" value="CRUD Data UKM" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="A1" target="P67" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="195" />
+              <mxPoint x="240" y="520" />
+              <mxPoint x="920" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6.7 ↔ D2 -->
+        <mxCell id="af25" value="Simpan / Update / Hapus UKM" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;exitX=1;exitY=0.4;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" edge="1" source="P67" target="AD2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af26" value="Data UKM Terkini" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=10;dashed=1;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.6;entryDx=0;entryDy=0;" edge="1" source="AD2" target="P67" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
